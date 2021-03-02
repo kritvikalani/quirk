@@ -4,7 +4,7 @@ import {
   NavigationState,
   NavigationAction,
 } from "react-navigation";
-import { StatusBar, Platform } from "react-native";
+import { StatusBar, Platform, Text } from "react-native";
 import { Container, Row, GhostButton, Header, IconButton } from "../ui";
 import theme from "../theme";
 import * as Haptic from "expo-haptics";
@@ -65,15 +65,15 @@ const Notifier = ({ isActive }) => (
       width: 32,
       height: 32,
       borderRadius: 32,
-      backgroundColor: theme.pink,
-      borderColor: theme.darkPink,
+      backgroundColor: theme.yellow,
+      borderColor: theme.orange,
       borderWidth: 2,
     }}
     pose={isActive ? "active" : "inactive"}
   />
 );
 
-const BUTTON_SIZE = 96;
+const BUTTON_SIZE = 95;
 
 export default class extends React.Component<
   ScreenProps,
@@ -207,9 +207,11 @@ export default class extends React.Component<
                 textAlign: "center",
               }}
             >
+              <Text>Quirk</Text>
               {isSettingCode
                 ? "Please set a passcode"
                 : "Please enter your passcode."}
+                
             </Header>
           </Row>
         </Container>
