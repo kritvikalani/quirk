@@ -207,7 +207,7 @@ export default class extends React.Component<
                 textAlign: "center",
               }}
             >
-              <Text>Quirk</Text>
+              <Text>Quirk App</Text>
               {isSettingCode
                 ? "Please set a passcode"
                 : "Please enter your passcode."}
